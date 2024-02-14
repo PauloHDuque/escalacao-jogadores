@@ -19,23 +19,23 @@ function addPlayer(){
   }
 }
 
-// function removePlayer(){
-//   const number = document.getElementById('removeNumber').value
-//   const removePlayer = $('#player -'+number)
-  
-//   const confirmation = confirm("Deseja remover esse jogador? \n" + removePlayer.innerText)
-//   if(confirmation){
-//     removePlayer.remove()
-//     document.getElementById('removeNumber').value = ""
-//   }
-// }
-
 function removePlayer(){
-  const numerJogador = $('#removeNumber').val();
-  const confirmar = confirm("Tem certeza que deseja excluir o jogador? \n" + $("#player_"+numerJogador).text());
-
-  if(confirmar) {
-    $("#player_"+numerJogador).remove()
-    $('#removeNumber').val('');
+  const number = document.getElementById('removeNumber').value
+  const removePlayer = $('#player -'+number)
+  
+  const confirmation = confirm("Deseja remover esse jogador? \n" + removePlayer.innerText)
+  if(confirmation){
+    removePlayer.remove()
+    document.getElementById('removeNumber').value = ""
   }
 }
+
+// function removePlayer(){
+//   const numerJogador = $('#removeNumber').val();
+//   const confirmar = confirm("Tem certeza que deseja excluir o jogador? \n" + $("#player_"+numerJogador).text());
+
+//   if(confirmar) {
+//     $("#player_"+numerJogador).remove()
+//     $('#removeNumber').val('');
+//   }
+// }
