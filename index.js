@@ -14,14 +14,14 @@ function addPlayer(){
     list.appendChild(newPlayer)
   
     document.getElementById('name').value = ""
-    $('#position').val('')
+    document.getElementById('position').value = ""
     document.getElementById('number').value = ""
   }
 }
 
 function removePlayer(){
   const number = document.getElementById('removeNumber').value
-  const removePlayer = $('#player -'+number)
+  const removePlayer = document.getElementById('player_' + number)
   
   const confirmation = confirm("Deseja remover esse jogador? \n" + removePlayer.innerText)
   if(confirmation){
@@ -30,12 +30,3 @@ function removePlayer(){
   }
 }
 
-// function removePlayer(){
-//   const numerJogador = $('#removeNumber').val();
-//   const confirmar = confirm("Tem certeza que deseja excluir o jogador? \n" + $("#player_"+numerJogador).text());
-
-//   if(confirmar) {
-//     $("#player_"+numerJogador).remove()
-//     $('#removeNumber').val('');
-//   }
-// }
